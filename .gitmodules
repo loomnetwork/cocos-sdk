@@ -1,0 +1,3 @@
+[submodule "deps/loom-js"]
+	path = deps/loom-js
+	url = git@github.com:loomnetwork/loom-js.git
