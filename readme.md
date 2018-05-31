@@ -4,8 +4,11 @@
 ## Prerequisites
 
 > Python 2.7
+
 > Git
+
 > NodeJS, NPM
+
 > Loom, [Install](https://loomx.io/developers/docs/en/prereqs.html)
 
 ## Generate LoomJS SDK
@@ -32,8 +35,11 @@
 ## 环境依赖:
 
 > Python 2.7
+
 > Git
+
 > NodeJS, NPM
+
 > Loom, [Install](https://loomx.io/developers/docs/en/prereqs.html)
 
 ## 生成 LoomJS SDK
