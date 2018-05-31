@@ -14,7 +14,8 @@ def pack_loomjs(useYarn = False):
     print('clean loomjs')
     run('git checkout -f', cwd = loomjs_root)
 
-    print('sync loomjs npm dependencies')
+    print('sync loomjs npm dependencies...')
+    print('it may take a few minutes, depending on the network situation.')
     if useYarn:
         run('yarn', cwd = loomjs_root)
     else:
@@ -48,7 +49,8 @@ def exclude_google_protobuf_in_loomjs(configfile):
                 break
             idx += 1
         return modify
-    modify_file(configfile, m)
+    if not modify_file(configfile, m):
+        print('WARNING! {0} have not been modified'.format(configfile))
 
 def modify_tweetnacl(folder):
     src_file = os.path.join(folder, 'nacl-fast.js')
@@ -75,11 +77,12 @@ def modify_file(filepath, cb):
     modify = cb(lines)
 
     if not modify:
-        print('WARNING! {0} have not been modified'.format(filepath))
-        return
+        return False
 
     with open(filepath, 'w') as file:
         file.write(''.join(lines))
+
+    return True
 
 def project_root():
     return os.path.join(os.path.dirname(__file__), '..')
@@ -87,9 +90,13 @@ def project_root():
 def run(command, cwd = None, shell=False):
     if shell:
         cmd = command
+        out = None
+        errout = None
     else:
         cmd = command.split(' ')
-    p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=shell, cwd=cwd)
+        out = subprocess.PIPE
+        errout = subprocess.PIPE
+    p = subprocess.Popen(cmd, stdout=out, stderr=errout, shell=shell, cwd=cwd)
     stdout, stderr = p.communicate()
     ret = p.returncode
     if 0 != ret:
@@ -116,13 +123,16 @@ def main():
 
     src_files = [
         loomjs,
+        os.path.join(PROJECT_ROOT, 'src', 'loom.umd.js.meta'),
         os.path.join(PROJECT_ROOT, 'src', 'A-loom-polyfill-for-cocos.js'),
-        os.path.join(PROJECT_ROOT, 'src', 'google-protobuf.js')
+        os.path.join(PROJECT_ROOT, 'src', 'A-loom-polyfill-for-cocos.js.meta'),
+        os.path.join(PROJECT_ROOT, 'src', 'google-protobuf.js'),
+        os.path.join(PROJECT_ROOT, 'src', 'google-protobuf.js.meta')
     ]
     for src in src_files:
         shutil.copy2(src, COCOS_SDK_ROOT)
 
-    print('loomjs for Cocos Creator is package under folder cocossdk')
+    print('LoomJS SDK for Cocos Creator is under directory cocossdk')
     print('>>>Done')
 
 
