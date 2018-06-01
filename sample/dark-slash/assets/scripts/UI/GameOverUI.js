@@ -2,6 +2,7 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
+        killNum: cc.Label,
     },
 
     init (game) {
