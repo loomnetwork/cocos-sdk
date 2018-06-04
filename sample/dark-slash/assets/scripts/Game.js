@@ -1,3 +1,6 @@
+
+import createContract from './loom/SimpleContract'
+
 cc.Class({
     extends: cc.Component,
 
@@ -29,6 +32,17 @@ cc.Class({
         this.bossMng.init(this);
         this.sortMng = this.foeGroup.getComponent('SortMng');
         this.sortMng.init();
+
+        //Loom create contract
+        this.contract = null;
+        let self = this;
+        createContract(function(err, c) {
+            if (err) {
+                cc.log('ERROR! create contract failed' + JSON.stringify(err));
+                return;
+            }
+            self.contract = c;
+        });
     },
 
     start () {
@@ -98,6 +112,41 @@ cc.Class({
 
     restart: function () {
         cc.director.loadScene('PlayGame');
+    },
+
+
+    saveKillNum(num) {
+        if (null == this.contract) {
+            cc.log('ERROR! contract is null');
+            return;
+        }
+
+        const stringScore = '' + num;
+        this.contract.store('score', stringScore, function(e) {
+            if (e) {
+                cc.log('ERROR! store failed');
+                return;
+            }
+            cc.log('SUCCESS! store success:' + stringScore);
+        });
+    },
+
+    loadKillNum(cb) {
+        if (null == this.contract) {
+            cc.log('ERROR! contract is null');
+            return;
+        }
+
+        this.contract.load('score', function(e, result) {
+            if(e) {
+                cc.log('ERROR! load failed:' + JSON.stringify(e));
+                cc.log(e.stack)
+                cc.log(e.toString());
+                return;
+            }
+            cc.log('SUCCESS! load value finish:' + result);
+            cb(result);
+        });
     }
 
     // called every frame, uncomment this function to activate update callback

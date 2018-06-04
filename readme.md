@@ -30,6 +30,10 @@
 
 * `Loom Block Chain` configuration, Contract's usage, take a look at [this](https://loomx.io/developers/docs/en/prereqs.html)
 
+## Sample
+
+Sample `dark-slash` come from `Cocos Creator` [Tutorial Project](https://github.com/cocos-creator/tutorial-dark-slash)
+
 ---
 
 ## 环境依赖:
@@ -47,7 +51,7 @@
 * `git submodule update --init`, 更新 `git` 子工程
 * 运行命令 `./tools/genCocoSDK.py`
 
-* `./tools/genCocoSDK.py` 会在工程根目录下生成的 `cocossdk` 目录, 这就是 Loom SDK 在 Cocos Creator 上的适配包
+`./tools/genCocoSDK.py` 会在工程根目录下生成的 `cocossdk` 目录, 这就是 Loom SDK 在 Cocos Creator 上的适配包
 
 ## 测试步骤:
 
@@ -60,4 +64,8 @@
 ## 说明
 
 * `Loom Block Chain` 的配置, 运行, 合约的使用, 参见[这里](https://loomx.io/developers/docs/en/prereqs.html)
+
+## Sample
+
+Sample `dark-slash` 来自于 `Cocos Creator` 的[样例工程](https://github.com/cocos-creator/tutorial-dark-slash)
 

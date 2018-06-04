@@ -12,6 +12,10 @@ cc.Class({
 
     // use this for initialization
     show () {
+        const self = this;
+        this.game.loadKillNum(function(value) {
+            self.killNum.string = value;
+        });
         this.node.setPosition(0, 0);
     },
 

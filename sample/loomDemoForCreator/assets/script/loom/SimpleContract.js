@@ -1,3 +1,4 @@
+import './A-loom-polyfill-for-cocos'
 import {
   NonceTxMiddleware, SignedTxMiddleware, Client,
   Contract, Address, LocalAddress, CryptoUtils

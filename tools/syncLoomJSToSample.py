@@ -15,6 +15,11 @@ def main():
     for src in src_files:
         shutil.copy(src, dst_folder)
 
+    src_files = [ os.path.join(dst_folder, f) for f in os.listdir(dst_folder)]
+    dst_folder = os.path.join(PROJECT_ROOT, 'sample', 'dark-slash', 'assets', 'scripts', 'loom')
+    for src in src_files:
+        shutil.copy(src, dst_folder)
+
     print('>>>Done')
 
 

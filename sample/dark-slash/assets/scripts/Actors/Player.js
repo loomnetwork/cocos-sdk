@@ -32,6 +32,7 @@ cc.Class({
         this.isAtkGoingOut = false;
         this.validAtkRect = cc.rect(25, 25, (this.node.parent.width - 50), (this.node.parent.height - 50));
         this.oneSlashKills = 0;
+        this.killCounter = 0;
     },
 
     registerInput () {
@@ -157,6 +158,8 @@ cc.Class({
         if (this.oneSlashKills >= 3) {
             this.game.inGameUI.showKills(this.oneSlashKills);
         }
+
+        this.killCounter += this.oneSlashKills;
     },
     
     addKills () {
@@ -178,6 +181,7 @@ cc.Class({
         this.isAttacking = false;
         this.inputEnabled = false;
         this.anim.play('dead');
+        this.game.saveKillNum(this.killCounter);
     },
 
     corpse () {
