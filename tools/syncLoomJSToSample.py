@@ -7,7 +7,7 @@ import shutil
 PROJECT_ROOT = os.path.join(os.path.dirname(__file__), '..')
 
 def main():
-    COCOS_SDK_ROOT = os.path.join(PROJECT_ROOT, 'cocossdk')
+    COCOS_SDK_ROOT = os.path.join(PROJECT_ROOT, 'loom-cocos-sdk')
 
     src_files = [ os.path.join(COCOS_SDK_ROOT, f) for f in os.listdir(COCOS_SDK_ROOT)]
 

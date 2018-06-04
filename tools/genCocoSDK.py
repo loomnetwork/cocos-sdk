@@ -113,7 +113,7 @@ def is_yarn_installed():
     return exist    
 
 def main():
-    COCOS_SDK_ROOT = os.path.join(PROJECT_ROOT, 'cocossdk')
+    COCOS_SDK_ROOT = os.path.join(PROJECT_ROOT, 'loom-cocos-sdk')
     loomjs = pack_loomjs(useYarn=is_yarn_installed())
 
     # clean cocos sdk output folder
@@ -132,7 +132,7 @@ def main():
     for src in src_files:
         shutil.copy2(src, COCOS_SDK_ROOT)
 
-    print('LoomJS SDK for Cocos Creator is under directory cocossdk')
+    print('LoomJS SDK for Cocos Creator is under directory loom-cocos-sdk')
     print('>>>Done')
 
 
