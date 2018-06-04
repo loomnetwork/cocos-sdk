@@ -14,9 +14,10 @@
 
 ## Loom Cocos SDK
 
-[](./images/Loom-Cocos-SDK.png)
+![](./images/Loom-Cocos-SDK.png)
 
 `Loom-Cocos-SDK` have same api, same protobuf, similar contract with `loom-js`.
+
 `Loom Cocos SDK` is base on [Loom-JS](https://github.com/loomnetwork/loom-js/) , and proting it to `Cocos Creator` .
 
 ### Generate LoomJS SDK
@@ -59,7 +60,7 @@ Please consult the [Loom SDK docs](https://loomx.io/developers/docs/en/prereqs.h
 e.g. `sample/loomDemoForCreator` use  [setscore.proto](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore.proto), and related [setscore_pb.js](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore_pb.js)
 3. write yur own contract as requirements of your game, and serailezse your data with `setscore_pb.js`, and send to Loom Blockchain, take a look at [SimpleContract](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/SimpleContract.js) 
 
-[](./images/script_loom_folder.png)
+![](./images/script_loom_folder.png)
 
 4. invoke api of your contract at suitable position.
 5. Run
@@ -98,7 +99,7 @@ Test Steps
 
 ## Loom Cocos SDK
 
-[](./images/Loom-Cocos-SDK.png)
+![](./images/Loom-Cocos-SDK.png)
 
 由图可见, `Loom-Cocos-SDK` 与 `loom-js` 使用相同的API, 相同的 `protobuf` 文件, 基本类似的合约写法。
 
@@ -145,7 +146,7 @@ cp ../genesis.example.json genesis.json
 e.g. 本例中使用的是 [setscore.proto](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore.proto), 及对应生成的 [setscore_pb.js](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore_pb.js)
 3. 编写适应自己游戏需求的合约, 使用上一步中的 `setscore_pb.js` 将数据序列化, 并将数据发往 `DappChain`, 参见  [SimpleContract](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/SimpleContract.js) 
 
-[](./images/script_loom_folder.png)
+![](./images/script_loom_folder.png)
 
 4. 在你的游戏中需要的位置调用上一步中的接口.
 5. 运行, 检查
