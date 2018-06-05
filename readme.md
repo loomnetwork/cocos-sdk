@@ -4,13 +4,10 @@
 
 ## Prerequisites
 
-> Python 2.7
-
-> Git
-
-> NodeJS, NPM
-
-> Loom, [Install](https://loomx.io/developers/docs/en/prereqs.html)
+1. Python 2.7
+2. Git
+3. [NodeJS](https://nodejs.org/en/), [NPM](https://www.npmjs.com/get-npm)
+4. [Loom](https://loomx.io/), [Install Steps](https://loomx.io/developers/docs/en/prereqs.html)
 
 ## Loom Cocos SDK
 
@@ -45,20 +42,24 @@ cd build
 cp ../genesis.example.json genesis.json
 ```
 
-Run Blockchain
+Run Blockchain:
 
 ```
+# unable to start http server: listen tcp 127.0.0.1:9092: bind: address already in use
+pkill blueprint # kill server first
 ../../loom run
 ```
 
+
+
 Please consult the [Loom SDK docs](https://loomx.io/developers/docs/en/prereqs.html) for further instruction on running your own DappChain.
 
-## Integrate to Creator Game 
+## Integrate to Creator Game
 
-1. copy the generated `Loom Cocos SDK` to your project's `asset/script` directory, and rename it to `loom` 
+1. copy the generated `Loom Cocos SDK` to your project's `asset/script` directory, and rename it to `loom`
 2. write your own `proto` file as requirements of your game
-e.g. `sample/loomDemoForCreator` use  [setscore.proto](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore.proto), and related [setscore_pb.js](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore_pb.js)
-3. write yur own contract as requirements of your game, and serailezse your data with `setscore_pb.js`, and send to Loom Blockchain, take a look at [SimpleContract](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/SimpleContract.js) 
+  e.g. `sample/loomDemoForCreator` use  [setscore.proto](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore.proto), and related [setscore_pb.js](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore_pb.js)
+3. write yur own contract as requirements of your game, and serailezse your data with `setscore_pb.js`, and send to Loom Blockchain, take a look at [SimpleContract](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/SimpleContract.js)
 
 ![](./images/script_loom_folder.png)
 
@@ -70,7 +71,7 @@ e.g. `sample/loomDemoForCreator` use  [setscore.proto](https://github.com/loomne
 there have two `Sample` project:
 * `loomDemoForCreator` simplely use loom sdk
 * `dark-slash` use loom sdk in a real game
- 
+
 Test Steps
 
 * update git submodule, run command `git submodule update --init`, if you have done this, skip this.
@@ -89,13 +90,10 @@ Test Steps
 
 ## 环境依赖:
 
-> Python 2.7
-
-> Git
-
-> NodeJS, NPM
-
-> Loom, [Install](https://loomx.io/developers/docs/en/prereqs.html)
+1. Python 2.7
+2. Git
+3. [NodeJS](https://nodejs.org/en/), [NPM](https://www.npmjs.com/get-npm)
+4. [Loom](https://loomx.io/), [Install Steps](https://loomx.io/developers/docs/en/prereqs.html)
 
 ## Loom Cocos SDK
 
@@ -143,8 +141,8 @@ cp ../genesis.example.json genesis.json
 
 1. 将上一步中打包生成好的 Loom Cocos SDK 放到工程的 `script` 目录下, 重命名为 `loom`
 2. 根据你的游戏的需求编写自己的 `proto` 文件, 然后用 `protoc` 生成对应的 `js` 文件
-e.g. 本例中使用的是 [setscore.proto](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore.proto), 及对应生成的 [setscore_pb.js](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore_pb.js)
-3. 编写适应自己游戏需求的合约, 使用上一步中的 `setscore_pb.js` 将数据序列化, 并将数据发往 `DappChain`, 参见  [SimpleContract](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/SimpleContract.js) 
+  e.g. 本例中使用的是 [setscore.proto](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore.proto), 及对应生成的 [setscore_pb.js](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/assets/protobuff/setscore_pb.js)
+3. 编写适应自己游戏需求的合约, 使用上一步中的 `setscore_pb.js` 将数据序列化, 并将数据发往 `DappChain`, 参见  [SimpleContract](https://github.com/loomnetwork/phaser-sdk-demo/blob/master/src/SimpleContract.js)
 
 ![](./images/script_loom_folder.png)
 
