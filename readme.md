@@ -1,6 +1,28 @@
 
 # Loom SDK for Cocos Creator
 
+## Content:
+- English
+ * [Prerequisites](#prerequisites)
+ * [Loom Cocos SDK](#loom-cocos-sdk)
+ * [Generate LoomJS SDK](#generate-loomjs-sdk)
+ * [Install Loom](#install-loom)
+ * [Install Cocos Creator](#install-cocos-creator)
+ * [Integrate to Creator Game](#integrate-to-creator-game)
+ * [Sample](#sample)
+ * [Notice](#notice)
+
+- 中文
+
+ * [环境依赖](#环境依赖)
+ * [Loom Cocos SDK](#loom-cocos-sdk-介绍)
+ * [打包并生成 Loom Cocos SDK](#打包并生成-loom-cocos-sdk)
+ * [安装 Loom](#安装-loom)
+ * [安装 Cocos Creator](#安装-cocos-creator)
+ * [Creator Game 内集成调用](#creator-game-内集成调用)
+ * [Sample](#sample)
+ * [说明](#说明)
+
 
 ## Prerequisites
 
@@ -8,10 +30,17 @@
 2. Git
 3. [NodeJS](https://nodejs.org/en/), [NPM](https://www.npmjs.com/get-npm)
 4. [Loom](https://loomx.io/), [Install Steps](https://loomx.io/developers/docs/en/prereqs.html)
+5. [Cocos Creator](http://www.cocos.com/creator)
 
 ## Loom Cocos SDK
 
+Loom global structure diagram
+
 ![](./images/Loom-Cocos-SDK.png)
+
+Loom Cocos SDK structure diagram
+
+![](./images/loom-cocos-sdk-struct.png)
 
 `Loom-Cocos-SDK` have same api, same protobuf, similar contract with `loom-js`.
 
@@ -54,6 +83,18 @@ pkill blueprint # kill server first
 
 Please consult the [Loom SDK docs](https://loomx.io/developers/docs/en/prereqs.html) for further instruction on running your own DappChain.
 
+## Install Cocos Creator
+
+![](http://www.cocos2d-x.org/s/images/creator_192.png)
+
+Cocos Creator is a complete package of game development tools and workflow, including a game engine (based on Cocos2d-x), resource management, scene editing, game preview, debug and publish one project to multiple platforms.
+
+For the first time we introduced entity-component structure and data-driven workflow to the Cocos2d-x family. With JavaScript, you can scripting your component in no time. The editor and engine extension is also made with JavaScript so you can make games and refine your tool in a single programming language.
+
+Cocos Creator provides an innovative, easy to use toolset such as the UI system and Animation editor. The toolset will be expanding continuously and quickly, thanks to the open editor extension system.
+
+you can download `Cocos Creator` from [here](http://www.cocos.com/creator) , and install.
+
 ## Integrate to Creator Game
 
 1. copy the generated `Loom Cocos SDK` to your project's `asset/script` directory, and rename it to `loom`
@@ -94,10 +135,18 @@ Test Steps
 2. Git
 3. [NodeJS](https://nodejs.org/en/), [NPM](https://www.npmjs.com/get-npm)
 4. [Loom](https://loomx.io/), [Install Steps](https://loomx.io/developers/docs/en/prereqs.html)
+5. [Cocos Creator](http://www.cocos.com/creator)
 
-## Loom Cocos SDK
+
+## Loom Cocos SDK 介绍
+
+Loom 全局结构如下:
 
 ![](./images/Loom-Cocos-SDK.png)
+
+Loom Cocos SDK 软件结构如下:
+
+![](./images/loom-cocos-sdk-struct.png)
 
 由图可见, `Loom-Cocos-SDK` 与 `loom-js` 使用相同的API, 相同的 `protobuf` 文件, 基本类似的合约写法。
 
@@ -137,6 +186,18 @@ cp ../genesis.example.json genesis.json
 
 更多详情介绍参见[Loom SDK docs](https://loomx.io/developers/docs/en/prereqs.html).
 
+
+## 安装 Cocos Creator
+
+![](http://www.cocos2d-x.org/s/images/creator_192.png)
+
+Cocos Creator是以内容创作为核心的游戏开发工具，在Cocos2d-x基础上实现了彻底脚本化、组件化和数据驱动等特点。
+
+Cocos Creator基于开源框架Cocos2d-x，实现了一体化、可扩展、可自定义工作流的编辑器，并在Cocos系列产品中第一次引入了组件化编程思想和数据驱动的架构设计，这极大地简化了Cocos2d-x开发工作流中的场景编辑、UI设计、资源管理、游戏调试和预览、多平台发布等工作，是使用Cocos2d-x进行团队协作开发的最佳选择。
+
+在 [这里](http://www.cocos.com/creator) 下载最新的 `Cocos Creator` 安装即可.
+
+
 ## Creator Game 内集成调用
 
 1. 将上一步中打包生成好的 Loom Cocos SDK 放到工程的 `script` 目录下, 重命名为 `loom`
@@ -167,4 +228,5 @@ cp ../genesis.example.json genesis.json
 
 * `Loom Block Chain Server` 的配置, 运行, 合约的使用, 参见[这里](https://loomx.io/developers/docs/en/prereqs.html)
 * Sample `dark-slash` 来自于 `Cocos Creator` 的[样例工程](https://github.com/cocos-creator/tutorial-dark-slash)
+
 
