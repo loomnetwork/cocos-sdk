@@ -1,5 +1,8 @@
+# Deprecated Repository
 
-# Loom SDK for Cocos Creator
+This repository is **out-of-date, and we are looking for maintainers**. If you would like to help advance this project, reach out to us via [Telegram](https://t.me/loomnetworkdev).
+
+To learn more about Loom.js, our JS library for building browser apps & NodeJS services that interact with Loom DAppChains check out [this page](https://github.com/loomnetwork/loom-js).
 
 ## Content:
 - English
