@@ -4,6 +4,8 @@ This repository is **out-of-date, and we are looking for maintainers**. If you w
 
 To learn more about Loom.js, our JS library for building browser apps & NodeJS services that interact with Loom DAppChains check out [this page](https://github.com/loomnetwork/loom-js).
 
+# Loom SDK for Cocos Creator
+
 ## Content:
 - English
  * [Prerequisites](#prerequisites)
