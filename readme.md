@@ -2,7 +2,8 @@
 
 This repository is **out-of-date, and we are looking for maintainers**. If you would like to help advance this project, reach out to us via [Telegram](https://t.me/loomnetworkdev).
 
-To learn more about Loom.js, our JS library for building browser apps & NodeJS services that interact with Loom DAppChains check out [this page](https://github.com/loomnetwork/loom-js).
+Meanwhile, check out
+[this page](https://loomx.io/developers/docs/en/join-testnet.html) to find out how you can join the Loom PlasmaChain Testnet.
 
 # Loom SDK for Cocos Creator
 
